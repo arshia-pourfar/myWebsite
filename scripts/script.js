@@ -62,5 +62,13 @@ $(document).ready(function () {
     rewind: true,
   });
   splide8.mount();
+  
+  var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
+  var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
+  if (isAndroid) {
+    $('.first-section').css("background-attachment", "scroll");
+  } if (isiPhone) {
+    $('.first-section').css("background-attachment", "fixed");
+  }
 
 });
