@@ -271,6 +271,11 @@ html {
     .progress-bar .percentage-skill {
         font-size: 11px;
     }
+}
 
-
+@media only screen and (max-width:500px) {
+    .first-section {
+        background-attachment: fixed;
+        background-attachment: scroll;
+    }
 }
