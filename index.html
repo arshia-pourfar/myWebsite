@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="styles/jquery.multiscroll.min.css">
+    <link rel="stylesheet" href="styles/splide.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/all.min.js"></script>
+    <script src="scripts/jQuery-library.js"></script>
+    <script src="scripts/splide-extension-auto-scroll.min.js"></script>
+    <script src="scripts/splide.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light text-start fixed-top">
+        <a class="navbar-brand me-sm-5 me-4" href="index.php">
+            <img style="width: 55px;" src="images/logo.png" alt="">
+        </a>
+        <!-- <button class="menu navbar-toggler custom-toggler ms-3 mt-2" aria-label="Main Menu Toggle navigation"
+            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+            type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-expanded="false">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+                <path class="line line1"
+                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3"
+                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+        </button> -->
+
+        <div class="collapse navbar-collapse ms-5" id="mynavbar">
+            <ul id="myMenu" class="navbar-nav me-auto flex-md-row flex-column-reverse">
+                <li data-menuanchor="about" class="active nav-item ms-2">
+                    <a class="nav-link" href="#about">ABOUT ME</a>
+                </li>
+
+                <li data-menuanchor="portfolio" class="nav-item ms-2">
+                    <a class="nav-link" href="#portfolio">PORTFOLIO</a>
+                </li>
+
+                <li data-menuanchor="contact" class="nav-item ms-2">
+                    <a class="nav-link" href="#contact">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="multiscroll">
+        <div class="ms-left w-100">
+
+            <div class="ms-section first-section">
+                <div class="opaque-bg animated fadeInDown">
+                    <h1>
+                        Arshia
+                        <span class="p-1 pe-0"
+                            style="color:#FF6363; font-family: fantasy; font-size: 35px; font-style: italic;">/</span>
+                        Pourfar
+                    </h1>
+                    <p>
+                        <span id="holder"></span>
+                        <span class="blinking-cursor">|</span>
+                    </p>
+                </div>
+                <a href="#about">
+                    <i id="moveDown" class="fa fa-chevron-down bounce"></i>
+                </a>
+            </div>
+
+            <div class="ms-section">
+                <div class="container about-me-section">
+                    <h1 class="mb-4" style="font-family: vazirBold; color:#ff7878;">
+                        My Skills
+                    </h1>
+
+                    <div class="progress mb-3 h-100">
+                        <div class="progress-bar d-inline-block bg-danger" role="progressbar" style="width: 95%;"
+                            aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="title-skill html5">Html 5</span>
+                                <span class="ms-2 percentage-skill">95%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress mb-3 h-100">
+                        <div class="progress-bar d-inline-block bg-warning" role="progressbar" style="width: 90%;"
+                            aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="title-skill js">javaScript</span>
+                                <span class="ms-2 percentage-skill">90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress mb-3 h-100">
+                        <div class="progress-bar d-inline-block" role="progressbar" style="width: 80%;"
+                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="title-skill css3">Css 3</span>
+                                <span class="ms-2 percentage-skill">80%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress mb-3 h-100">
+                        <div class="progress-bar d-inline-block" role="progressbar"
+                            style="width: 75%;background: rgb(5, 183, 228);" aria-valuenow="75" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="title-skill jquery">jQuery</span>
+                                <span class="ms-2 percentage-skill">75%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress mb-3 h-100">
+                        <div class="progress-bar d-inline-block" role="progressbar"
+                            style="width: 70%; background-color: #be55eb;" aria-valuenow="70" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="title-skill bootstrap">Bootstrap 5</span>
+                                <span class="ms-2 percentage-skill">70%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress mb-3 h-100">
+                        <div class="progress-bar d-inline-block" role="progressbar"
+                            style="width: 65%; background-color: #808080;" aria-valuenow="65" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="title-skill php">php</span>
+                                <span class="ms-2 percentage-skill">65%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress mb-3 h-100">
+                        <div class="progress-bar d-inline-block sql" role="progressbar" style="width: 50%;"
+                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="title-skill sql">mySql</span>
+                                <span class="ms-2 percentage-skill">50%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ms-section">
+                <div class="wrapper container">
+                    <section class="m-auto splide splide-8" aria-labelledby="carousel-heading" dir="ltr">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <h1>Majd Photo Art</h1>
+                                    <h5>photography site</h5>
+                                    <a class="d-block" href="javascript:void(0)">
+                                        <img class="width-full vertical-site mt-3"
+                                            src="images/projectImage/majd-photo-art.png">
+                                    </a>
+                                </li>
+
+                                <li class="splide__slide">
+                                    <h1>Imen karco</h1>
+                                    <h5>Work clothing company website</h5>
+                                    <a class="d-block" href="https://arshia-pourfar.github.io/imen-karco/">
+                                        <img class="width-full vertical-site mt-3"
+                                            src="images/projectImage/imen-karco.png">
+                                    </a>
+                                </li>
+
+                                <li class="splide__slide">
+                                    <h1>Calculator</h1>
+                                    <h5>a simple calculator</h5>
+                                    <a class="d-block" href="https://arshia-pourfar.github.io/calculator/">
+                                        <img class="width-full mt-3" src="images/projectImage/calculator.JPG">
+                                    </a>
+                                </li>
+
+                                <li class="splide__slide">
+                                    <h1>Memory game</h1>
+                                    <h5>a game for fun</h5>
+                                    <a class="d-block" href="https://arshia-pourfar.github.io/Memory-Game/">
+                                        <img class="width-full mt-3" src="images/projectImage/memory-game.png">
+                                    </a>
+                                </li>
+
+                                <li class="splide__slide">
+                                    <h1>XO game</h1>
+                                    <h5>XO game for two players</h5>
+                                    <a class="d-block" href="https://arshia-pourfar.github.io/XO-game/">
+                                        <img class="width-full mt-3" src="images/projectImage/XO-game.png">
+                                    </a>
+                                </li>
+
+                                <li class="splide__slide">
+                                    <h1>Rock Paper Sizer</h1>
+                                    <h5>Rock paper scissors game</h5>
+                                    <a class="d-block" href="https://arshia-pourfar.github.io/rock_paper_sizer/">
+                                        <img class="width-full mt-3" src="images/projectImage/rock-paper-sizer.png">
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+
+            <div class="ms-section">
+
+            </div>
+
+        </div>
+        <div class="ms-right d-none">
+            <div class="ms-section"></div>
+            <div class="ms-section"></div>
+            <div class="ms-section"></div>
+            <div class="ms-section"></div>
+        </div>
+    </div>
+
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/jquery.multiscroll.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script type="text/javascript">
+        history.pushState(null, document.title);
+
+        window.addEventListener('popstate', function (event) {
+            history.pushState(null, document.title);
+        });
+    </script>
+</body>
+
+</html>
