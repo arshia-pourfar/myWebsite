@@ -31,9 +31,14 @@ html {
 }
 
 .first-section {
-    background: fixed url('../images/main.jpg') no-repeat;
+    background: fixed url('../images/header-image.jpg') no-repeat;
     background-size: cover;
     color: aliceblue;
+}
+
+.myName,
+.myName span {
+    font-size: 0;
 }
 
 #multiscroll-nav li span {
@@ -53,6 +58,7 @@ html {
     position: relative;
     display: inline-block;
     background-color: transparent;
+    font-family: vazirBold;
 }
 
 .nav-link::before {
@@ -62,7 +68,8 @@ html {
     bottom: 0;
     width: 100%;
     height: 3px;
-    background-color: rgba(0, 0, 0, .7);
+    /* background-color: rgba(0, 0, 0, .7); */
+    background-color: #ff6363;
     border-radius: 4px;
     scale: 0;
     transform-origin: right;
@@ -206,52 +213,92 @@ html {
 }
 
 /* slider style */
-/* Page Style */
-
-.splide__slide.custom-effect {
-    transition: 0.3s all;
-    border-bottom: 3px solid transparent;
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
 
-.splide__slide.custom-effect.is-active {
-    border-bottom-color: greenyellow;
+/* Hide the images by default */
+.mySlides {
+    display: none;
 }
 
-.splide__slide {
-    height: 500px;
+.mySlides img {
+    height: 400px;
 }
 
-.splide__slide img {
-    height: 280px;
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 10px;
+    color: rgb(207, 66, 0);
+    font-weight: bold;
+    font-size: 45px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
-.splide__slide .vertical-site {
-    height: 360px;
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
-.wrapper-center {
-    width: 75%;
-    margin: 2rem auto;
+.prev:hover,
+.next:hover {
+    color: rgb(207, 66, 0);
+    opacity: 0.5;
 }
 
-.splide__pagination__page.is-active {
-    background: #646464;
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 1px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
-/* Progress */
-
-.my-slider-progress {
-    background: #ccc;
+.activeSlide,
+.dot:hover {
+    background-color: #717171;
+    opacity: 1;
 }
 
-.my-slider-progress-bar {
-    background: greenyellow;
-    height: 5px;
-    transition: width 400ms ease;
-    width: 0;
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 
+@media only screen and (max-width:810px) {
+    .mySlides img {
+        height: 100%;
+        max-width: 440px;
+    }
+}
 
 @media only screen and (max-width:768px) {
     .about-me-section {
@@ -275,5 +322,25 @@ html {
     .first-section {
         background-attachment: fixed;
         background-attachment: scroll;
+    }
+
+    .prev,
+    .next {
+        top: 100%;
+    }
+}
+
+@media only screen and (max-width:440px) {
+    .mySlides img {
+        height: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width:330px) {
+
+    .opaque-bg p,
+    #holder {
+        font-size: 15px;
     }
 }
